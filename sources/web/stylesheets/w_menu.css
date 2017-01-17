@@ -1,0 +1,524 @@
+@charset "utf-8";
+
+/***************
+	W_MENU
+	
+header
+header-primary
+submenu
+autocomplete (rails)
+****************/
+
+#header {
+	background: #FFFFFF;
+	width: 95%;
+	margin:0px auto 0px auto;
+	position: relative;
+}
+
+#header a {
+	color: #e2e2e2;
+	/*font-weight: bold;      k: trop epais*/
+	text-decoration: none;
+}
+
+#header.header-simple {
+	background: #555555 url(../images/menu-single.gif) 0 100% no-repeat;
+}
+
+#header.header-simple .side-header {
+	background: #555555 url(../images/menu-single.gif) 100% 100% no-repeat;
+	height: 45px;
+}
+
+
+
+.header-join, .header-login, .header-about {
+	float: left;
+	display: block;
+	padding: 0 0 0 12px;
+	margin: 13px 0 0 12px;
+	font-size: 105%;
+}
+
+.header-login, .side-header a, .header-about {
+	border-left: 1px solid #5481ac;
+}
+
+#section-profile {
+	border: none;
+}
+
+.side-header {
+	padding: 0 175px 0 10px;
+	float: right;
+	margin: 0;
+	position: relative;
+	min-height: 33px;
+} /*IE6*/
+
+.side-header a {
+	padding: 5px 10px 4px 10px;
+	margin: 11px 0;
+    display: block;
+    float: left;
+    line-height: 1px;
+    word-spacing: -0.1em;
+}
+
+.side-header a.activity {
+	margin: 11px 10px 0 -6px;
+	padding: 0;
+	background: url(../images/menu-current.gif) 100% -150px no-repeat;
+	border: none;
+	text-decoration: none;
+} /*IE6*/
+
+.side-header a.activity strong {
+	padding: 5px 16px 3px 5px;
+	display: block;
+	height: 15px;
+}
+
+.side-header a.activity:hover strong,
+.side-header a.activity:focus strong
+.side-header a.current strong {
+	background: url(../images/menu-current.gif) 0 -120px no-repeat;
+}
+
+.side-header a.activity:hover,
+.side-header a.activity:focus,
+.side-header a.current {
+	background: #668eb5 url(../images/menu-current.gif) 100% -120px no-repeat;
+	cursor: pointer;
+	text-decoration: none !important;
+}
+
+.side-header a.current {
+	background-position: 100% -300px !important;
+}
+
+.side-header img {
+	vertical-align: middle;
+	border: 1px solid #a2c1de;
+	padding: 1px;
+	position: absolute;
+	left: -6px;
+	top: 12px;
+}
+
+#login-form {
+	float: left;
+	padding: 13px 0 0 20px;
+	font-size: 85%;
+	font-weight: bold;
+}
+
+#login-form #side-password, #login-form #side-username {
+	width: 80px;
+	border: 2px solid #fff;
+}
+
+.menu_search_form{
+	display:inline;
+	position:relative;
+	top:0px;
+	background-color:#FFFFFF;
+}
+.menu_search_btn {
+	/*position: absolute;
+	right: 0;
+	top: 0;*/
+	
+	display:inline;
+	position:relative;
+	height:25px;
+	width:25px;
+	padding:0;
+	margin:0;
+	right:8px;
+	background:#FFF url(../images/search_menu.gif) 0 0 no-repeat;
+	
+	border:none;
+	z-index:6;
+	cursor:pointer;
+}
+.menu_search_btn:hover {
+	background:#FFF url(../images/search_menuh.gif) 0 0 no-repeat;
+}
+/*
+.menu_search_txt:hover {
+	border: 1px solid #FF33CC;
+}
+*/
+.menu_search_txt {
+	/*margin-left: 0px;*/
+	color: #CCC;		/* k: couleur lorsque non focus� = couleur 'Search a desire...' plus pale */
+	width: 220px;
+	border: 1px solid #000000;
+	padding: 1px 0px 0px 0px;
+	background: #fff;
+	height: 22px;		/* k: jou� avec le padding top-bottom pour agrandir aussi...*/
+	font-size:17px;
+	z-index:5;
+} /*ie7*/
+
+.menu_search_txt:focus {	/* k: lorsque focus on garde la couleur rose */
+	/* color: #000;			k: on peu change la couleur du texte lorsque focus */
+	border-color:#00CCFF;
+}
+
+.menu_search_form:hover .menu_search_txt{
+	border: 1px solid #00CCFF;
+}
+.menu_search_form:hover .menu_search_arrow{
+	background: transparent url(../images/arrow_menu2.gif) 100% 0 no-repeat;
+}
+
+.menu_search_arrow:hover,
+.menu_search_arrow:focus,
+.menu_search_arrow_hover,
+.menu_search_arrow{
+	outline:0;
+	display:inline;
+	position:relative;
+	right:14px;
+	z-index:1;
+	border:none;
+	width:20px;
+	height:25px;
+	cursor:pointer;
+}
+.menu_search_arrow{
+	background: transparent url(../images/arrow_menu.gif) 100% 0 no-repeat;
+}
+.menu_search_arrow:hover, .menu_search_arrow:focus{
+	outline:0;
+	background: transparent url(../images/arrow_menu2.gif) 100% 0 no-repeat;
+}
+.menu_search_arrow_hover{ /* inutile maintenant !? */
+	outline:0;
+	background: transparent url(../images/arrow_menu2.gif) 100% 0 no-repeat;
+}
+.menu_search_arrow_hover2{
+	outline:0;
+	background: transparent url(../images/arrow_menu.gif) 100% 0 no-repeat;
+}
+
+#header input {
+	vertical-align: middle;
+	font-size: 100%;
+	line-height: 1.25em;
+	padding-left: 2px;	/* k: pour decaler le input search vers la droite */
+}
+
+#header ul, #header li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header ul {
+	float: left;
+}
+
+#header-primary {
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #FFF;
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+#header-primary div {		/* k: normalement inutile pr moi, sauf si le LI FLOAT RIGHT ne va pas */
+	float: right;
+	width: 314px;
+	padding-top: 4px;
+}
+
+#header-primary ul {
+	padding-left: 5px;
+	min-height: 42px;		/* k: regler en bidouillant height jusqu'a mini sans bug affichage */
+	height:42px;			/* k: je le specifie pr ke ce soit identique sous IE */
+	
+}
+
+#header-primary.menu-single {
+	background: #FFF url("../images/bkg_menu.gif") 100% 100% no-repeat;
+}
+
+#header-primary.menu-single ul {
+	background: url("../images/bkg_menu2.gif") 0 100% no-repeat;
+	margin:0;
+	
+}
+
+#header li {
+	float: left;
+	position: relative;
+	margin:10px 1px 0 2px;	/* k: margin-top pour l'espace entre le haut du menu et le haut du titre de section */
+}
+
+#header li a, #header-primary div a {
+	color: #000000;
+	word-spacing: -0.1em;
+	line-height: 1em;
+	position: relative;
+	display: block;
+	float: left;
+	height:25px;			/* k: pour r�gler la hauteur de la boite qui contient le texte (et le EM) */
+}
+
+#header-primary li a.current strong,
+#header-primary li a:hover strong,
+#header-primary li a:focus strong,
+#header-primary div a.current strong,
+#header-primary div a:hover strong,
+#header-primary div a:focus strong {
+	display: block;
+	background: transparent url("../images/menu_side.gif") 0 0 no-repeat; /* IMG QUI EXISTE PLUS (coins arrondi comme digg surement) */
+	color: #00bae9;
+	cursor: pointer;
+	font-size:18px;					/* k: taille du texte (lorsque OUI survol) */
+} /*ie6, ie7*/
+
+#header-primary li a strong, #header-primary div a strong {
+	padding: 5px 4px 5px 8px;		/* k: padding sur les cotes du mot 'explore' */
+	font-size:18px;			/* k: taille du texte (lorsque NON survol) */
+	font-weight:normal;
+	font-family:"Trebuchet MS";
+	
+	height:18px;
+	float: left;
+	display: block;
+}
+.menu_logo{
+	margin-top:-10px;
+	margin-right:10px;	
+}
+
+.menu_line {
+	height:1px;
+	padding:0;
+	margin:0;
+	border-bottom:1px solid #DDEAF6;
+}
+.menu_item a{
+	padding-right: 21px;	/* k: espace entre texte et fleche donc epaisseur fleche ici +2 */
+	margin-right:5px;		/* k: white space between two sections */
+	background: transparent url("../images/arrow_menu.gif") 100% 0 no-repeat;
+}
+
+.menu_item a.w_m_section_alone{
+	background: none; /* une image qui fait des coins arrondis cf digg */
+}
+#header-primary li a.current,
+#header-primary a.current,
+#header li a:hover,
+#header-primary div a:hover,
+#header li a:focus,
+#header-primary div a:focus,
+#header-primary li a.now {
+	background: #F00 url("../images/side_menu.gif") 0 0 no-repeat; /* k: effet arrondi sur le bord droit... gauche nan ? marche pu jcrois */
+	text-decoration: none;
+	color: #000;
+}
+
+#header li a:hover,
+#header-primary div a:hover,
+#header li a:focus,
+#header-primary div a:focus {
+	background-color: #f9f9f9; /*k: blue qd hover sur section & arrow*/
+}
+
+#header-primary a.current {
+	margin: 0 4px;
+}
+.menu_item a:hover{
+	
+	padding-right: 21px;	/* k: espace entre texte et fleche donc epaisseur fleche ici +2 */
+	margin-right:5px;		/* k: white space between two sections */
+	background: #F00 url("../images/arrow_menu2.gif") 100% 0 no-repeat;
+}
+
+
+#header-primary li a em{
+	visibility:hidden;			/* fleche cach� en temps normal */
+	position: absolute;
+	display: block;
+	background: #fff url("../images/arrow_menu2.gif") 100% 0 no-repeat;	
+	height: 15px;
+	width: 20px;
+	padding: 5px 0;
+	top: 0;
+	right: 0;
+	text-indent: -2000em;
+}
+/* survol sur nom_section affichage de la fleche (par dessus la fleche en fin de
+nom_section)
+*/
+#header-primary li a:hover em,
+#header-primary li a:focus em,
+#header-primary li a.current em,
+#header-primary li a.now em {
+	visibility:visible;
+}
+
+/*
+#header li a em:hover,
+#header li a em:focus{
+	background: #FFF url(../images/arrow_menu3.gif) 100% 0 no-repeat;
+}
+*/
+#header li a.now em {
+	background: #FFF url(../images/arrow_menu3.gif) 100% 0 no-repeat;
+}
+#header li.extra {
+	border-left: 1px solid #90b557;
+	margin-left: 10px;
+	padding-left: 4px;
+}
+.menu_img{
+	display:inline;
+	margin-right:5px;
+	float:left;
+	border:0;
+}
+.submenu {
+	position: absolute;
+	top: 42px;				/* k: hauteur du menu (sp�cifi� plus haut) */
+	width: 6em;
+	background: #fff url("../images/l_blue2white_20.gif") bottom repeat-x;
+	border:1px solid #e9e9e9;
+	border-top: 0;
+	padding: 5px 5px 5px 5px;
+	z-index: 9999;
+	text-align: left;
+}
+/* Submenu positions */
+#pan_menu01 {
+	left:170px;
+}
+#pan_menu02 {
+	left:225px;
+}
+#pan_menu03 {
+	left: 325px;
+}
+#pan_menu04{
+	left:585px;
+}
+#pan_menu05{
+	right:30px;
+}
+#pan_menu06{
+	right:0px;
+}
+.submenu ul li, .submenu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+	width:100%;
+	/*position: relative;*/
+}
+.submenu ul li a {	/* k: */
+	display: block;
+	width:100%;
+	padding:0px;
+	margin:0;
+	height:19px;
+	line-height:19px;
+	text-indent:10px;
+	text-decoration: none;
+}
+.submenu ul li a:hover { /* marche pas surement redéfini ailleru mais le background F8F8F8 est introuvable en css */
+	color: #0000FF;
+}
+.submenu ul li a em {	/* k: fleche = bloc EM */
+	float: right;
+	font-style: normal;
+	width: 15px;
+	height:19px;
+}
+.submenu ul li a:hover em {	/* k: fleche = bloc EM version Hover sur titre section! */
+	float: right;
+	font-style: normal;
+	width: 15px;
+	height:19px;
+	background: #FFFFFF url("../images/arrow_submenu2.gif") 100% 0 no-repeat;
+}
+
+.submenu ul li em.expand-open, .submenu ul li em.expand-closed {
+	/*text-indent: -2000em;*/
+	float: right;
+	background: transparent url(../images/arrow_submenu.gif) 100% 0 no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin:0;
+	padding:0;
+}
+.submenu ul li a.expand-closed {
+	background: #FFF url(../images/arrow_submenu3.gif) 100% 0 no-repeat;
+	margin:0;
+	padding:0;
+}
+
+.submenu ul li a.expand-open:hover, .submenu ul li a.expand-closed:hover {
+	background-color: #ddd;
+	margin:0;
+	padding:0;
+} 
+/* Sub Submenu */
+.submenu ul li ul li  {
+	padding: 0;
+	margin: 0;
+	height:14px;
+}
+.submenu ul li ul li a {
+	width:100%;
+	display: block;
+	border: none;
+	font-size: 85%;	/* k: plus petit */
+	text-indent:16px;
+	height:18px;	/* ne fonctionne pas alors que normalement si, oblig� de cod� en dur... */
+}
+
+
+/**** AutoComplete *****/
+
+#header-primary div.auto_complete ul {
+  width: 244px;
+  height:auto;
+  font-size:100%;
+  z-index:999;
+
+  /*border:1px solid #000;*/
+  
+  border:1px solid #DDEAF6;
+  color: #00bae9;
+  border-top:none;
+  margin:-4px 0 0 0;
+  padding:0;
+  list-style-type:none;
+  background:#FFF url(../images/l_blue2white_20.gif) bottom repeat-x;
+}
+#header-primary div.auto_complete ul li {
+  width: 238px;		/* k: width de ul moins padding 2px left et 2px right, et 2px border*/
+  margin:0;
+  padding:2px 3px;
+  line-height:20px;
+}
+#header-primary div.auto_complete ul li.selected { 
+  background-color: #DDEAF6; 
+  cursor:pointer;
+}
+#header-primary div.auto_complete ul strong.highlight { 
+  color: #800; 
+  margin:0;
+  padding:0;
+  background:none;
+}

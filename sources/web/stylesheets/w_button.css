@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/***********************************************************
+               W_BTN : Waluu Button
+
+-- Infos --
+form button see w_form.css
+
+-- Standard --
+w_btn         = standard button with a right 16x16 ico
+w_btn_txt     = standard button without ico (just text)
+w_btn_pos     = if it's a positive button like add/accept etc.
+w_btn_neg     = if it's a negative button like remove/refuse etc.
+
+-- Call examples --
+link_to 'accept', accept_friend_friendship_path(f.id), {:class=>"w_btn_pos btn_user_accept"}, :method=>:put
+or
+link_to 'refuse', friendship_path(f.id), {:class=>"w_btn_neg btn_user_refuse"}, :confirm => 'Are you sure?'.t, :method => :delete
+or
+link_to "Search desires".t, action_search_url(:action=>'desires'), :class=>"w_btn btn_search"
+
+*************************************************************/
+.w_btn, .w_btn_txt, .w_btn_pos, .w_btn_neg {
+	padding: 1px 3px 1px 22px;
+    text-decoration: none;
+	background:#FFF;
+    border: 1px solid #DDEAF6;
+}
+.w_btn_txt{
+	padding: 1px 3px 1px 3px;
+}
+.w_btn:hover, .w_btn_txt:hover{
+	background-color:#AFC5FF;
+	border-color:#615FFF;
+	color:#00F;
+	text-decoration:none;
+}
+.w_btn_pos:hover {
+	background-color:#CFFFCF;
+	border-color:#00FF00;
+	color:#008000;
+	text-decoration:none;
+}
+.w_btn_neg:hover {
+	background-color:#FFDFE0;
+	border-color:#FF4F56;
+	text-decoration:none;
+	color:#FF0000;
+}
+
+/*******************
+	W_BTN SET ICON
+*********************/
+.btn_search{
+	background:#FFFFFF url("../images/search_16.png") no-repeat 4px 50%;
+}
+.btn_settings{
+	background:#FFFFFF url("../images/settings.png") no-repeat 4px 50%;
+}
+.btn_signoff{
+	background:#FFFFFF url("../images/signoff_16.png") no-repeat 4px 50%;
+}
+.btn_explore{
+	background:#FFFFFF url("../images/explore_16.png") no-repeat 4px 50%;
+}
+.btn_add_desire{
+	background:#FFFFFF url("../images/adddesire.png") no-repeat 4px 50%;
+}
+.btn_remove_desire{
+	background:#FFFFFF url("../images/adddesire.png") no-repeat 4px 50%;
+}
+.btn_remove_friendship{
+	background:#FFFFFF url("../images/remove_friendship.png") no-repeat 4px 50%;
+}
+.btn_user_accept{
+	background:#FFFFFF url("../images/user_accept.png") no-repeat 4px 50%;
+}
+.btn_user_refuse{
+	background:#FFFFFF url("../images/user_refuse.png") no-repeat 4px 50%;
+}

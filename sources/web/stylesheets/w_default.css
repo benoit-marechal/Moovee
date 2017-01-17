@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+/*******************************************************
+	W_DEFAULT : set global default value 
+
+-- Here is the global color used in the website (don't use #000, "3numbers" because of the replace function) --
+
+Text_XImportant    =   #f1f1f1;             (title h3, text on input button)
+Text_XXImportant   =   #aaaaa;            (title h4, text on input button)
+Text_XXXImportant   =  #5f5f5f;            (title footer, title not important)
+Text_Normal        =   #444444;      (all text without specifities)
+Text_HighLight     =   #7f7f7f;		()
+Text_Warning       =   #7f7f7f;
+Text_Light       =     #8ac4ff;     (text footer, 'Search a desire', '3 characters or more' etc.)
+
+Link_Normal        =   #00bae9;     (a)
+Link_HighLight     =   #0000a0;     (a:hover)
+Link_Warning       =   #000000;
+
+Border_01          =   
+Border_02          = 
+Border_03          =                     
+Border_04          =   #yellow                   (contanier_help, etc.)
+Background_01      =
+Background_02      =
+Background_03      =      
+Background_04      =   #yellow    (contanier_help, etc.)
+
+FontSize-Init      =  16px   (conserv� ?)
+FontSize-Normal    =  100%
+FontSize-small     =  90%
+FontSize-xsmall    =  80%
+FontSize-xxsmall   =  70%
+FontSize-large     =  110%
+FontSize-xlarge    =  120%
+FontSize-xxlarge   =  130%
+
+-- Default value defined in this file --
+INIT
+LINKS
+LISTS
+IMAGE
+TABLE
+TEXT
+FONT-SIZE (tag)
+CONTAINERS
+ID/CLASS RAILS (for autocomplete see : w_menu.css)
+
+-- Infos --
+
+form       => w_form.css
+body/html  => w_layout.css
+
+-- Stylesheet Order -- 
+
+w_default => w_layout => w_form => w_menu => w_block => w_navbar => w_bubble =>
+w_button => w_misc => w_footer
+
+********************************************************/
+
+
+/****************************************
+   INIT : reinit not-cross-browser value
+*****************************************/
+h1,h2,h3,h4,h5,h6,pre,code,table,tr,td,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input,div {
+	margin:0;
+	padding:0;
+}
+h1,h2,h3,h4,h5,h6,pre,code {
+	font-size:1em;
+}
+
+/************
+   LINKS
+*************/
+a {
+	color:#00bae9;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#0000a0;
+	text-decoration:underline;
+}
+
+a:active, a:focus {
+	border:none;
+	text-decoration:none;
+	outline:none;
+}
+
+.linkimportant{  /* A CHANGER EN  a_important */
+	font-size:100%;
+}
+
+/***************
+   LISTS
+****************/
+ul {
+	list-style-type:none;
+}
+
+/***********
+   IMAGE
+************/
+.small_icon {
+	margin:0;
+	padding:0;
+	float:right;
+}
+
+img{
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+/***********
+  TABLE
+************/
+table {
+	border:0;
+}
+
+tr {
+	border:0;
+}
+
+td {
+	border:0;
+}
+
+/*******
+  TEXT 
+********/
+h3 {
+	font-size:125%;
+	text-align:left;
+	text-decoration:none;
+	font-weight:bold;
+	margin:0;
+	margin-top:20px;
+	margin-bottom: 7px;
+	padding:0;
+	color:#aaaaaa;
+}
+
+strong{
+	font-size:110%;
+	font-weight:bold;
+}
+
+em{
+	font-style:italic;
+}
+
+p {
+	text-align:justify;
+}
+
+.big_text{
+	font-size: 24px;
+	color:#7F7F7F;
+	margin:0 0 10px 0;
+	padding:0;
+	text-align:center;
+	/*height:40px;
+	padding-bottom:20px;*/
+}
+
+/************
+  FONT-SIZE
+*************/
+.size_lev0{
+	font-size:180%;
+}
+.size_lev1{
+	font-size:160%;
+}
+.size_lev2{
+	font-size:140%;
+}
+.size_lev3{
+	font-size:120%;
+}
+.size_lev4{
+	font-size:100%;
+}
+.size_lev5{
+	font-size:80%;
+}
+.size_lev6{
+	font-size:60%;
+}
+
+/************
+  CONTAINERS
+*************/
+.center{
+	text-align:center;
+}
+
+.fright{
+	float:right;
+}
+
+.fleft{
+	float:left;
+}
+
+/************************
+	ID/CLASS RAILS
+*************************/
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+
+#ErrorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#ErrorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#ErrorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#ErrorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+/*************
+  MISC
+**************/

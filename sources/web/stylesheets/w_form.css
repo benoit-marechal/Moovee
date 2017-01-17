@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/**************
+  W_FORM : w_f
+***************/
+
+input {
+	font-size:25px;
+	height:30px;
+	color:#999999;
+	border:1px solid #00CCFF;
+	background:#FFFFFF;
+}
+
+form {
+	display:inline;
+}
+
+
+/****************
+	BTN
+***************/
+.w_f_btn, .w_f_btn_cancel, .w_f_btn_big {
+	height:23px;
+	padding:0px 1px;
+	color:#0099FF;
+	font:bold 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#FFFFFF url("../images/l_blue2white_20.gif") bottom repeat-x;
+	border:solid #CCCCCC;
+	border-width:1px 2px 2px 1px;
+	cursor:pointer;
+}
+.w_f_btn_cancel {
+	background:url("../images/l_pink2white_20.gif") bottom repeat-x;
+	color:#FF33CC;
+}
+
+.w_f_btn_big {
+	height:33px;
+	font-size:18px;
+}
+
+
+
+
+
+

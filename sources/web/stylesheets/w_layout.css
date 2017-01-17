@@ -1,0 +1,98 @@
+/*******************************************
+	W_LAYOUT : containers and main blocks
+
+body/html
+  menu
+  (ads_top)
+  left
+    navbar
+    left_items
+      (ads_inline) => in w_block
+  right
+    help
+    (ads_right)
+    right_items
+  footer
+  
+********************************************/
+
+html{
+	min-width:920px;	
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family:"Trebuchet MS", Arial, Verdana, sans serif;
+	font-size:16px;
+	color:#444444;
+	text-align:justify;
+	/* background:#FFFFFF url("../images/fade_blue_v1.gif") repeat-x;*/
+	/* background:#FFFFFF url("../images/bkg_blue_bubble.jpg") fixed no-repeat; */
+	background:#FFF url("../images/bkg_blue_bubble.gif") top repeat-y;
+}
+
+
+#ads_top{
+	width:98%;
+	text-align:center;
+	margin:0px auto;
+	padding:55px 0px 0px 0px;
+}
+.ads_top_img{
+	border:1px solid #DDEAF6;
+}
+
+
+.block_left{
+	background:url("../images/fond_02.gif") left bottom no-repeat;
+	width:665px;
+	margin:20px 0 0 2%;
+	padding:0;
+	float:left;
+}
+
+.block_left_item{
+	background:url("../images/fond_02.gif") left bottom no-repeat;
+	
+}
+.block_left_item2{
+	background:url("../images/fond_01.gif") left top no-repeat;
+	
+	padding:22px;
+}
+.block_left_item ul{
+	margin-top:5px;
+	padding-left:20px;
+	list-style-position:inside;
+	list-style-image:url("../images/icon16.gif");
+	
+}
+.block_left_item2 ul li{
+	padding-top:3px;
+}
+.block_left_item ul.user{
+	margin-top:5px;
+	padding-left:20px;
+	list-style-position:inside;
+	list-style-image:url("../images/user_gray.gif");
+	
+}
+#right{
+	float:left;
+	width:21%;
+	background-color:#FFF0FE;
+	border:1px solid #FF33CC;
+}
+
+.block_right{
+	float:right;
+	width:27%;
+	margin:0 2% 0 0;
+	padding:0;
+}
+.block_right_item{
+	padding:10px;
+	background:url("../images/bkg_dot_blue.png") ; /*#F0FAFF */
+	border:1px solid #0066FF;
+}

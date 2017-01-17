@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Rechercher un film ou un acteur</title>
+		<link href="images/icon16.gif" rel="shortcut icon" title="images/x-icon" type="application/images/x-icon+xml" />
+		<link href="stylesheets/w_default.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="stylesheets/w_layout.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="stylesheets/w_footer.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="stylesheets/w_menu.css" media="screen" rel="Stylesheet" type="text/css" />
+		<script src="javascripts/prototype.js" type="text/javascript"></script>
+		<script src="javascripts/effects.js" type="text/javascript"></script>
+		<script src="javascripts/dragdrop.js" type="text/javascript"></script>
+		<script src="javascripts/controls.js" type="text/javascript"></script>
+		<script src="javascripts/application.js" type="text/javascript"></script>
+		<script src="javascripts/function_v1.js" type="text/javascript"></script>
+	</head>
+	<body>
+			
+<!-- W_Menu -->
+<script src="javascripts/w_menu.js" type="text/javascript" ></script>
+<link href="stylesheets/w_menu.css" media="screen" rel="Stylesheet" type="text/css" />
+<div id="header">
+	<div id="header-primary"  class="menu-single">
+		<ul>
+			<li><img alt="mooVee" class="menu_logo" src="images/logo.jpg" /></li>
+			<li class="menu_item">
+				<a href="http://localhost:3002/desires"><strong>Genres</strong><em id="menu01" class="ltn_arrow"></em></a>
+			</li>
+			<li >
+				<strong>Recherche :</strong> <form action="http://localhost:3002/search/desires" class="menu_search_form" id="search" method="get">
+					<input class="menu_search_txt" id="item_body" name="item[body]" size="30" type="text" value="Rechercher un film..." />
+					<input id="top-submit" class="menu_search_btn" type="submit" alt="" value="" />
+				</form>
+				
+			</li>
+			
+			<li >
+				<a href="rechercheavancee"><strong>Recherche avancée</strong></a>
+			</li>	
+		</ul>
+	</div>	
+	<!-- Submenu Genres  -->
+		<div id="pan_menu01" class="submenu" style="display:none;">
+			<ul>
+				<li style="margin:0"><a href="zr" style="height:19px;">Comédie</a></li>
+				<li><a href="zer" style="height:19px;">Horreur</a></li>
+				<li><a href="zer" style="height:19px;">Action</a></li>
+				<li><a href="erz" style="height:19px;">Policier</a></li>
+				<li><a href="zer" style="height:19px;">Drame</a></li>
+				<li><a href="zer" style="height:19px;">Romance</a></li>
+			</ul>
+		</div>
+</div>
+		
+		
+		<div class="block_left">
+			<div class="block_left_item">
+			<div class="block_left_item2">
+		        <h1>Rechercher un film ou un acteur</h1>
+		        <form action="/moovee/search/search" method="get">
+		            Requete : <input name="q" type="text">
+		            <input value="valider" type="submit">
+		        </form>
+		        <div class="infos">
+		            Résultats de la recherche pour : 
+		            <strong>i</strong>
+		        </div>
+		        <ul><li><a href="http://localhost:8080/moovee/acteurs/controller?id=DenzelWashington">Whasington<span style="margin: 10px;">Denzel<span style="margin: 10px;"></span></span></a><br></li><li><a href="http://localhost:8080/moovee/acteurs/controller?id=BradPitt">Pitt<span style="margin: 10px;">Brad<span style="margin: 10px;"></span></span></a><br></li><li><a href="http://localhost:8080/moovee/acteurs/controller?id=AngelinaJoly">Angelina<span style="margin: 10px;">Joly<span style="margin: 10px;"></span></span></a><br></li></ul>
+		        <ul class="user"><li><a href="http://localhost:8080/moovee/films/controller?id=Mr_and_Mrs_Smith">Mr and Mrs Smith</a><br></li><li><a href="http://localhost:8080/moovee/films/controller?id=Fight_Club">Fight club</a><br></li></ul>
+			</div>
+			</div>
+        </div>
+
+		
+<!-- W_FOOTER -->
+<br style="clear: both;" />
+<div id="w_ft">
+	<div class="w_ft_contents">
+        <div class="w_ft_item">
+            <dl>
+            <dt>Moovee</dt>
+            <dd>Ceci est un projet scolaire de fin d'étude de Master 2 Multimédia de l'Université de Bourgogne. Les encadrant ont été les professeurs <a href="http://ufrsciencestech.u-bourgogne.fr/~gadavid/" title="Daviod Gross Amblard">David Gross-Amblard</a> et <a href="http://www.lirmm.fr/~abrouk/" title="Lylia Abrouk">Lylia Abrouk</a> pour encadrant.</dd>
+			<dd style="text-align:center"><img alt="Pellicule" src="images/pelli.jpg" /></dd>
+            
+			</dl>
+        </div>
+        
+        <div class="w_ft_item">
+            <dl>
+            <dt>Créateurs</dt>
+                <dd><a href="http://www.anthonymarechal.com" title="Anthony Maréchal">Anthony Maréchal</a> : La base de données XML/OWL créée avec Protégé pour enrobé les informations de données sémantique et l'interface XHTML/CSS sont dû cette personne dont je vous conseil d'aller voir le CV.</dd>
+				<dd><a href="http://www.benoitmarechal.com" title="Benoit Maréchal">Benoit Maréchal</a> : Il s'agit de la personne à l'origine de l'implémentation J2EE de ce projet ainsi que le web service associé. Son CV est également très interressant !</dd>
+
+                
+			</dl>
+
+        </div>
+		
+		<div class="w_ft_item">
+            <dl>
+            <dt>mooVee est un Service !</dt>
+               <dd><strong style="color:#FF0000">D&eacute;veloppeur </strong>, vous souhaitez utiliser moovee au travers de votre site web ou de votre application ? Pas de problème, nous avons en effet mis en plus un web service vous permettant d'interroger les films de mooVee !</a></dd>
+           </dl>
+
+        </div>
+		
+		<div class="w_ft_item" style="width:23%">
+            <dl>
+            <dt>Web sémantique</dt>
+            <dd>Vous pouvez retrouver plus d'informations sur le Web sémantique sur les liens qui suivent : </dd>
+				<dd><a href="http://fr.wikipedia.org/wiki/Web_s%C3%A9mantique" title="Wikipedia Web semantique">Wikipédia</a> qui possède un article assez complet.</dd>
+				<dd><a href="http://ufrsciencestech.u-bourgogne.fr/m2mm/SI/LyliaAbrouk/Web_semantique.ppt" title="Contact at ">Un très bon cours</a> réalisé par M<sup>elle</sup> Lylia Abrouk, professeur à l'Université de Bourgogne.</dd>
+            </dl>
+        </div>
+		  
+
+         <div class="w_ft_copyright">
+            <div style="float:left">&nbsp;
+				<img alt="Favicon" src="images/icon16.gif" />
+	</div>
+            <div>&nbsp;&nbsp;&copy; mooVee Inc. 2008 &mdash;
+	le contenu de ce site n'est soumit à aucune licence et peut être librement réutilisé.
+		</div>
+
+	</div>
+</div>
+    
+</body></html>

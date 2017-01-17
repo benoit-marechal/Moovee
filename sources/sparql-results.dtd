@@ -1,0 +1,10 @@
+<!ELEMENT sparql (head, results)>
+<!ELEMENT head (variable*) >
+<!ATTLIST head name CDATA #REQUIRED >
+<!ELEMENT result (binding+) >
+<!ELEMENT binding (uri | literal) >
+<!ATTLIST binding name CDATA #REQUIRED >
+<!ELEMENT uri (#PCDATA) >
+<!ELEMENT literal (#PCDATA) >
+<!ATTLIST literal xml:lang CDATA #IMPLIED >
+<!ATTLIST literal datatype CDATA #IMPLIED >
